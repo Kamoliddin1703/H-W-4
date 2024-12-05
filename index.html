@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Code Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <class="form-container">
+
+      <h1>Регистрация</h1>
+      
+      <!-- Выбор страны -->
+      <label for="country">Выберите страну:</label>
+      <select id="country" name="country" onchange="updatePhoneCode()">
+        <option value="USA">США</option>
+        <option value="UK">Великобритания</option>
+        <option value="Russia">Россия</option>
+        <option value="India">Индия</option>
+        <option value="Japan">Япония</option>
+        <option value="Uzbekistan">Узбекистан</option>
+      </select>
+      
+      <!-- Поле ввода телефона -->
+      <label for="phone">Телефон:</label>
+      <div class="phone-input">
+        <span id="phone-code">+1</span>
+        <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер" oninput="detectCountry()">
+      
+      </div>
+
+      <input type="checkbox" id="checkbox">Подтвердите обработку данных
+      
+      <!-- Кнопка регистрации -->
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
